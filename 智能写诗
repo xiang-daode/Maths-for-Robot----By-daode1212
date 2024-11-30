@@ -1,0 +1,22 @@
+using System;
+
+ class Program
+ {
+  static void Main(string[] args)
+  {
+   Random rd = new Random();
+   for (int i = 1; i <= 28;i++ )
+   {
+       for (int j = 1; j <= 14; j++)
+       {
+           int n = rd.Next(19968, 19968 + 20902);
+           char hz = (char)n;
+           Console.Write(hz);
+           if (j ==7) Console.Write(",");
+       }
+       if(i<28)Console.Write(",\n");
+   }
+   Console.Write(".\n");
+   Console.ReadKey();
+  }
+ }
