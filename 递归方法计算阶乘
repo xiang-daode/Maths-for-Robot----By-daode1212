@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Factorial f = new Factorial();
+            Console.WriteLine(f.Calc(25)); //max:25?
+            Console.ReadKey();
+        }
+    }
+
+    public class Factorial
+    {
+        public long Calc(int i)
+        {
+            return ((i <= 1) ? 1 : (i * Calc(i - 1)));
+        }
+    }
+}
